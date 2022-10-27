@@ -1,0 +1,15 @@
+Amazon ECR provides a secure, scalable, and reliable registry for your Docker or Open Container Initiative (OCI) images. Amazon ECR supports public repositories with this API. For information about the Amazon ECR API for private repositories, see Amazon Elastic Container Registry API Reference .
+
+import boto3
+
+client = boto3.client('ecr-public')
+These are the available methods:
+
+batch_check_layer_availability()
+batch_delete_image()
+can_paginate()
+close()
+complete_layer_upload()
+create_repository()
+delete_repository()
+delete_repository_policy()
