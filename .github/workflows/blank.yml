@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: current working branch
-      run: echo "it is currently ${{DAY_OF_WEEK}} "
+      run: echo it is currently $DAY_OF_WEEK
   bash_section:
     runs-on: ubuntu-latest
     steps:
