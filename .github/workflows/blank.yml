@@ -23,5 +23,6 @@ jobs:
       with:
         repository: Reece-elder/M1-Demo
     - name: run python script in repo
-    - run: python script.py
+      run: python script.py
+    
 
