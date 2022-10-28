@@ -25,7 +25,7 @@ jobs:
     - name: clone repo
       uses: action/checkout@v3
       with:
-        repository: 'https://github.com/Reece-elder/M1-Demo'
+        repository: Reece-elder/M1-Demo
     - name: run python script in repo
       run: |
         python script.py
