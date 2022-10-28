@@ -26,7 +26,7 @@ jobs:
         with:
           repository: Reece-elder/M1-Demo
       - run: |
-          python script.py
+          ls 
           echo $BUILDCONFIGURATION complete
     
 
