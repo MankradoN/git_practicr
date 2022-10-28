@@ -22,13 +22,11 @@ jobs:
     env: 
       BUILDCONFIGURATION: test
     steps:
-    - name: clone repo
-      uses: action/checkout@v3
-      with:
-        repository: Reece-elder/M1-Demo
-    - name: run python script in repo
-      run: |
-        python script.py
-        echo $BUILDCONFIGURATION complete
+      - uses: action/checkout@v3
+        with:
+          repository: Reece-elder/M1-Demo
+      - run: |
+          python script.py
+          echo $BUILDCONFIGURATION complete
     
 
