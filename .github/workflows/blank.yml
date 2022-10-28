@@ -23,7 +23,7 @@ jobs:
       BUILDCONFIGURATION: test
     steps:
     - name: clone public repo
-      uses: action/checkout@v3
+      uses: action/checkout@v2
       with:
         repository: Reece-elder/M1-Demo
     - run: echo $BUILDCONFIGURATION complete
