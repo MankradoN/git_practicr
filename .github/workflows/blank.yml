@@ -2,12 +2,14 @@
 name: git_actions demo
 run-name: ${{ github.actor }} is learning github actions
 on: [push]
+env:
+  DAY_OF_WEEK: Friday
 jobs:
   check_job_status:
     runs-on: ubuntu-latest
     steps:
     - name: current working branch
-      run: echo "we are currently at ${{GITHUB_REF_NAME}} branch"
+      run: echo "it's currently ${{DAY_OF_WEEK}} "
   bash_section:
     runs-on: ubuntu-latest
     steps:
