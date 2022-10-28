@@ -19,12 +19,16 @@ jobs:
         echo ${{job.status}} was successful
   run_python:
     runs-on: ubuntu-latest
+    env: 
+      BUILDCONFIGURATION: test
     steps:
     - name: clone repo
       uses: action/checkout@v3
       with:
         repository: 'https://github.com/Reece-elder/M1-Demo'
     - name: run python script in repo
-      run: python script.py
+      run: |
+        python script.py
+        echo $BUILDCONFIGURATION complete
     
 
