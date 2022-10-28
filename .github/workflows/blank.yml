@@ -5,7 +5,9 @@ on: [push]
 jobs:
   check_job_status:
     runs-on: ubuntu-latest
-    
+    steps:
+    - name: current working branch
+      run: echo "we are currently at ${{GITHUB_REF_NAME}} branch"
   bash_section:
     runs-on: ubuntu-latest
     steps:
