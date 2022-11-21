@@ -1,0 +1,38 @@
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning github actions(CI)
+on: 
+  push:
+    branches:
+      - github_flow_attempt  
+jobs:
+  Check-Job-Status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print job status
+        run: echo "Job status is ${{job.status}} - exporting to output log file "
+        
+  Bash_Section:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run my bash commands
+      run: |
+        pwd
+        echo "The job status is ${{job.status}} " > output.log 
+        echo "export complete"
+        
+    - name: Upload output file
+        uses: actions/upload-artifact@v3
+
+        with:
+          name: output-log-file
+          path: output.log 
+    
+  Check-Out-Exec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v2
+        with:
+          repositiory: 'Reece-elder/M1-Demo'
+        run: python $GITHUB_WORKSPACE/script.py
+
